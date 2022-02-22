@@ -20,7 +20,6 @@ namespace ShoppingCart.web.Controllers
             ViewBag.total = cart.Sum(item => item.product.Price * item.Quantity);
             return View();
         }
-
         [Route("buy/{id}")]
         public IActionResult Buy(int id)
         {
