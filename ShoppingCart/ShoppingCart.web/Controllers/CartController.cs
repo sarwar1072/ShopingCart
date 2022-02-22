@@ -24,8 +24,7 @@ namespace ShoppingCart.web.Controllers
         [Route("buy/{id}")]
         public IActionResult Buy(int id)
         {
-            var product = new ProductModel();
-            
+            var product = new ProductModel();           
             if (SessionHelper.GetObjectFromJson<List<Item>>(HttpContext.Session, "cart")==null)
             {
                 var cart = new List<Item>();
